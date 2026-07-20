@@ -1,0 +1,18 @@
+﻿{
+    "pipeline_name":  "pl_map_agg_search",
+    "appId":  "187837596",
+    "name":  "Python 异步编程 教程",
+    "append":  "{\"sid\":\"1782701806857\",\"caller\":\"187837596\"}",
+    "uId":  "187837596",
+    "extraInfo":  "{\"domain\":\"generalv4\",\"env\":\"dx-v4-0\"}",
+    "limit":  3,
+    "sid":  "1782701806857",
+    "open_rerank":  true,
+    "disable_highlight":  false,
+    "disable_crawler":  true,
+    "full_text":  true,
+    "business":  "knowledge_base",
+    "sites":  [
+
+              ]
+}

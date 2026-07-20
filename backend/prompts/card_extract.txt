@@ -1,0 +1,9 @@
+根据以下对话内容，提取纠结卡片的结构化信息。
+
+输出严格的JSON格式（不要markdown代码块，直接输出JSON）：
+{{"title": "简短的纠结主题（5-10字）", "core_conflict": "X vs Y 的格式描述核心矛盾", "trigger_event": "是什么事件触发了这次纠结", "main_concern": "用户最担心的后果"}}
+
+只输出JSON，不要其他内容。
+
+对话内容：
+{conversation}

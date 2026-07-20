@@ -1,0 +1,8 @@
+﻿{
+    "success":  false,
+    "sid":  "1782701806857",
+    "error_type":  "System.Net.WebException",
+    "error_message":  "操作超时",
+    "request_path":  "demo\\doc\\aggsearch_test\\request.json",
+    "timestamp":  "2026-06-29T10:56:57.2207570+08:00"
+}
