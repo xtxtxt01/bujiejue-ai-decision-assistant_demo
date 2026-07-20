@@ -1,10 +1,17 @@
 import os
 
+# LLM API 配置（讯飞星火 MaaS 平台）
 LLM_CONFIG = {
-    "api_url": "https://maas-api.cn-huabei-1.xf-yun.com/v2/chat/completions",
+    "api_url": os.getenv("LLM_API_URL", "https://maas-api.cn-huabei-1.xf-yun.com/v2/chat/completions"),
     "models": {
-        "main": {"id": "xopdeepseekv4flash", "key": "b27ea9b866bd98d431ae63c0c87fd152:Y2IwMTAwNTcwOTVkZTAyMTMyYzgwYWZj"},
-        "fast": {"id": "xop3qwen4b", "key": "7a456a065971dde32efd85aa8c2d354c:MzRlYTQ0MjJiNDA3NzYyMTI3MDIwZjQ1"},
+        "main": {
+            "id": os.getenv("LLM_MAIN_MODEL_ID", "xopdeepseekv4flash"),
+            "key": os.getenv("LLM_MAIN_API_KEY", "")
+        },
+        "fast": {
+            "id": os.getenv("LLM_FAST_MODEL_ID", "xop3qwen4b"),
+            "key": os.getenv("LLM_FAST_API_KEY", "")
+        },
     },
     "temperature": 0.7,
     "max_tokens": 2048,
@@ -14,10 +21,10 @@ DB_PATH = os.path.join(os.path.dirname(__file__), "data", "app.db")
 
 # Memosyne 记忆系统配置
 MEMORY_CONFIG = {
-    "api_url": "http://172.16.154.251:21004",
-    "app_id": "5f2bb768",
-    "repo_id": "demo_repo",
-    "agent_id": "decision_agent",
+    "api_url": os.getenv("MEMORY_API_URL", "http://172.16.154.251:21004"),
+    "app_id": os.getenv("MEMORY_APP_ID", ""),
+    "repo_id": os.getenv("MEMORY_REPO_ID", ""),
+    "agent_id": os.getenv("MEMORY_AGENT_ID", "decision_agent"),
     "retrieval_top_n": 5,
     "retrieval_threshold": 0.25,  # 语义相似度阈值（越低召回越多）
 }

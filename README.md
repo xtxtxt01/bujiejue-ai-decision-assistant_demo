@@ -175,24 +175,32 @@ npm run dev
 
 ### 4. 配置 API 密钥
 
-编辑 `backend/config.py`，替换为你的实际密钥：
+**重要：** 项目使用环境变量管理敏感配置，避免将 API 密钥提交到 Git。
 
-```python
-LLM_CONFIG = {
-    "api_url": "https://maas-api.cn-huabei-1.xf-yun.com/v2/chat/completions",
-    "models": {
-        "main": {"id": "your-model-id", "key": "your-api-key"},
-        "fast": {"id": "your-fast-model-id", "key": "your-fast-api-key"},
-    },
-}
+```bash
+cd backend
 
-MEMORY_CONFIG = {
-    "api_url": "http://your-memosyne-host:port",
-    "app_id": "your-app-id",
-    "repo_id": "your-repo-id",
-    "agent_id": "your-agent-id",
-}
+# 复制环境变量模板
+cp .env.example .env
+
+# 编辑 .env 文件，填入你的实际密钥
+# Windows: notepad .env
+# Linux/Mac: nano .env
 ```
+
+`.env` 文件示例：
+```bash
+# LLM API 配置
+LLM_MAIN_API_KEY=your-actual-api-key-here
+LLM_FAST_API_KEY=your-fast-api-key-here
+
+# 记忆系统配置
+MEMORY_API_URL=http://your-memosyne-host:port
+MEMORY_APP_ID=your-app-id
+MEMORY_REPO_ID=your-repo-id
+```
+
+> 💡 **提示**：`.env` 文件已在 `.gitignore` 中排除，不会被提交到 Git
 
 ---
 

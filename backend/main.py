@@ -2,6 +2,10 @@ import sys
 import os
 sys.path.insert(0, os.path.dirname(__file__))
 
+# 加载环境变量
+from dotenv import load_dotenv
+load_dotenv()
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from database import init_db
