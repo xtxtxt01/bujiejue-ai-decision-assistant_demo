@@ -485,4 +485,4 @@ chore: 构建/工具链相关
 
 ---
 
-**Made with ❤️ by 科大讯飞核心研发平台**
+**Made with ❤️ by XINTAO**
